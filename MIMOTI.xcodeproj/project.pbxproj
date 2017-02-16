@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A4093B71E28CC7E0031754F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4093B61E28CC7E0031754F /* AppDelegate.swift */; };
+		3A4093BC1E28CC7E0031754F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4093BA1E28CC7E0031754F /* Main.storyboard */; };
+		3A4093BE1E28CC7E0031754F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4093BD1E28CC7E0031754F /* Assets.xcassets */; };
+		3A4093C11E28CC7E0031754F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4093BF1E28CC7E0031754F /* LaunchScreen.storyboard */; };
+		3A5948711E28D638005673CA /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948701E28D638005673CA /* RecordCell.swift */; };
+		3A5948731E28D81D005673CA /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948721E28D81D005673CA /* ChartsViewController.swift */; };
+		3A5948751E28D824005673CA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948741E28D824005673CA /* InfoViewController.swift */; };
+		3A5948771E28D828005673CA /* NewEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948761E28D828005673CA /* NewEntryController.swift */; };
+		3A5948791E28D82F005673CA /* OfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948781E28D82F005673CA /* OfflineViewController.swift */; };
+		3A59487B1E28D837005673CA /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59487A1E28D837005673CA /* RecordViewController.swift */; };
+		3A59487D1E28D89E005673CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59487C1E28D89E005673CA /* LoginViewController.swift */; };
+		3A59487F1E290B09005673CA /* JSONFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59487E1E290B09005673CA /* JSONFactory.swift */; };
+		3A5948811E290B17005673CA /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948801E290B17005673CA /* RestManager.swift */; };
+		3A5948831E290B50005673CA /* DiaryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948821E290B50005673CA /* DiaryRecord.swift */; };
+		3A5948851E290B5F005673CA /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948841E290B5F005673CA /* WeightRecord.swift */; };
+		3A5948871E290B68005673CA /* StepsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948861E290B68005673CA /* StepsRecord.swift */; };
+		3A5948891E290B7B005673CA /* SubjectiveCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948881E290B7B005673CA /* SubjectiveCondition.swift */; };
+		3A59488B1E290B93005673CA /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59488A1E290B93005673CA /* DateUtils.swift */; };
+		3A59488D1E290B9C005673CA /* KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59488C1E290B9C005673CA /* KeyboardUtils.swift */; };
+		3A59488F1E290BAD005673CA /* PopDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59488E1E290BAD005673CA /* PopDateViewController.swift */; };
+		3A5948911E290BBB005673CA /* PopDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948901E290BBB005673CA /* PopDatePicker.swift */; };
+		3A5948931E290BC5005673CA /* PopDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5948921E290BC5005673CA /* PopDateViewController.xib */; };
+		3A5948951E290BD2005673CA /* PopTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948941E290BD2005673CA /* PopTimeViewController.swift */; };
+		3A5948971E290BDB005673CA /* PopTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5948961E290BDB005673CA /* PopTimePicker.swift */; };
+		3A59489B1E290C24005673CA /* ReselectableSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59489A1E290C24005673CA /* ReselectableSegmentedControl.swift */; };
+		3A630AA41E3109C1007BEC6B /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A630AA31E3109C1007BEC6B /* ChartXAxisFormatter.swift */; };
+		840D785562C280AB193113FF /* Pods_MIMOTI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A740AC28BF5DFB2BFC9D8C0F /* Pods_MIMOTI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A4093B31E28CC7E0031754F /* MIMOTI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIMOTI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4093B61E28CC7E0031754F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A4093BB1E28CC7E0031754F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A4093BD1E28CC7E0031754F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A4093C01E28CC7E0031754F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A4093C21E28CC7E0031754F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5948701E28D638005673CA /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		3A5948721E28D81D005673CA /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		3A5948741E28D824005673CA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		3A5948761E28D828005673CA /* NewEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryController.swift; sourceTree = "<group>"; };
+		3A5948781E28D82F005673CA /* OfflineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
+		3A59487A1E28D837005673CA /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		3A59487C1E28D89E005673CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A59487E1E290B09005673CA /* JSONFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFactory.swift; sourceTree = "<group>"; };
+		3A5948801E290B17005673CA /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		3A5948821E290B50005673CA /* DiaryRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryRecord.swift; sourceTree = "<group>"; };
+		3A5948841E290B5F005673CA /* WeightRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
+		3A5948861E290B68005673CA /* StepsRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsRecord.swift; sourceTree = "<group>"; };
+		3A5948881E290B7B005673CA /* SubjectiveCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectiveCondition.swift; sourceTree = "<group>"; };
+		3A59488A1E290B93005673CA /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		3A59488C1E290B9C005673CA /* KeyboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardUtils.swift; sourceTree = "<group>"; };
+		3A59488E1E290BAD005673CA /* PopDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopDateViewController.swift; sourceTree = "<group>"; };
+		3A5948901E290BBB005673CA /* PopDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopDatePicker.swift; sourceTree = "<group>"; };
+		3A5948921E290BC5005673CA /* PopDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopDateViewController.xib; sourceTree = "<group>"; };
+		3A5948941E290BD2005673CA /* PopTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTimeViewController.swift; sourceTree = "<group>"; };
+		3A5948961E290BDB005673CA /* PopTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTimePicker.swift; sourceTree = "<group>"; };
+		3A59489A1E290C24005673CA /* ReselectableSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReselectableSegmentedControl.swift; sourceTree = "<group>"; };
+		3A630AA31E3109C1007BEC6B /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
+		A740AC28BF5DFB2BFC9D8C0F /* Pods_MIMOTI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MIMOTI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7418967455BC9C430F9C16 /* Pods-MIMOTI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIMOTI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MIMOTI/Pods-MIMOTI.debug.xcconfig"; sourceTree = "<group>"; };
+		E357471FC08B78C7FFA91D21 /* Pods-MIMOTI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIMOTI.release.xcconfig"; path = "Pods/Target Support Files/Pods-MIMOTI/Pods-MIMOTI.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A4093B01E28CC7E0031754F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840D785562C280AB193113FF /* Pods_MIMOTI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B44A10CC545DEED06071ADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A740AC28BF5DFB2BFC9D8C0F /* Pods_MIMOTI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A4093AA1E28CC7E0031754F = {
+			isa = PBXGroup;
+			children = (
+				3A4093B51E28CC7E0031754F /* MIMOTI */,
+				3A4093B41E28CC7E0031754F /* Products */,
+				7BD60698754730962A65BDF4 /* Pods */,
+				2B44A10CC545DEED06071ADF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A4093B41E28CC7E0031754F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A4093B31E28CC7E0031754F /* MIMOTI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A4093B51E28CC7E0031754F /* MIMOTI */ = {
+			isa = PBXGroup;
+			children = (
+				3A4093C21E28CC7E0031754F /* Info.plist */,
+				3A4093B61E28CC7E0031754F /* AppDelegate.swift */,
+				3A5948701E28D638005673CA /* RecordCell.swift */,
+				3A4093BA1E28CC7E0031754F /* Main.storyboard */,
+				3A4093BD1E28CC7E0031754F /* Assets.xcassets */,
+				3A4093BF1E28CC7E0031754F /* LaunchScreen.storyboard */,
+				3A5948921E290BC5005673CA /* PopDateViewController.xib */,
+				3A59487C1E28D89E005673CA /* LoginViewController.swift */,
+				3A59487A1E28D837005673CA /* RecordViewController.swift */,
+				3A5948741E28D824005673CA /* InfoViewController.swift */,
+				3A5948761E28D828005673CA /* NewEntryController.swift */,
+				3A5948721E28D81D005673CA /* ChartsViewController.swift */,
+				3A5948781E28D82F005673CA /* OfflineViewController.swift */,
+				3A59487E1E290B09005673CA /* JSONFactory.swift */,
+				3A5948801E290B17005673CA /* RestManager.swift */,
+				3A5948821E290B50005673CA /* DiaryRecord.swift */,
+				3A5948841E290B5F005673CA /* WeightRecord.swift */,
+				3A5948861E290B68005673CA /* StepsRecord.swift */,
+				3A5948881E290B7B005673CA /* SubjectiveCondition.swift */,
+				3A59488A1E290B93005673CA /* DateUtils.swift */,
+				3A59488C1E290B9C005673CA /* KeyboardUtils.swift */,
+				3A59488E1E290BAD005673CA /* PopDateViewController.swift */,
+				3A5948901E290BBB005673CA /* PopDatePicker.swift */,
+				3A5948941E290BD2005673CA /* PopTimeViewController.swift */,
+				3A5948961E290BDB005673CA /* PopTimePicker.swift */,
+				3A59489A1E290C24005673CA /* ReselectableSegmentedControl.swift */,
+				3A630AA31E3109C1007BEC6B /* ChartXAxisFormatter.swift */,
+			);
+			path = MIMOTI;
+			sourceTree = "<group>";
+		};
+		7BD60698754730962A65BDF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF7418967455BC9C430F9C16 /* Pods-MIMOTI.debug.xcconfig */,
+				E357471FC08B78C7FFA91D21 /* Pods-MIMOTI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A4093B21E28CC7E0031754F /* MIMOTI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4093C51E28CC7E0031754F /* Build configuration list for PBXNativeTarget "MIMOTI" */;
+			buildPhases = (
+				D527AB0BC886F0867244E662 /* [CP] Check Pods Manifest.lock */,
+				3A4093AF1E28CC7E0031754F /* Sources */,
+				3A4093B01E28CC7E0031754F /* Frameworks */,
+				3A4093B11E28CC7E0031754F /* Resources */,
+				11876ABB8A589AE5A295DC4F /* [CP] Embed Pods Frameworks */,
+				D25449EADAF6A0202C8ECAAA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MIMOTI;
+			productName = MIMOTI;
+			productReference = 3A4093B31E28CC7E0031754F /* MIMOTI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A4093AB1E28CC7E0031754F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Berner Fachhochschule";
+				TargetAttributes = {
+					3A4093B21E28CC7E0031754F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = R4N8R7XAH7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3A4093AE1E28CC7E0031754F /* Build configuration list for PBXProject "MIMOTI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A4093AA1E28CC7E0031754F;
+			productRefGroup = 3A4093B41E28CC7E0031754F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A4093B21E28CC7E0031754F /* MIMOTI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A4093B11E28CC7E0031754F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4093C11E28CC7E0031754F /* LaunchScreen.storyboard in Resources */,
+				3A4093BE1E28CC7E0031754F /* Assets.xcassets in Resources */,
+				3A5948931E290BC5005673CA /* PopDateViewController.xib in Resources */,
+				3A4093BC1E28CC7E0031754F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11876ABB8A589AE5A295DC4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MIMOTI/Pods-MIMOTI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25449EADAF6A0202C8ECAAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MIMOTI/Pods-MIMOTI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D527AB0BC886F0867244E662 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A4093AF1E28CC7E0031754F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A59488D1E290B9C005673CA /* KeyboardUtils.swift in Sources */,
+				3A5948791E28D82F005673CA /* OfflineViewController.swift in Sources */,
+				3A5948811E290B17005673CA /* RestManager.swift in Sources */,
+				3A5948731E28D81D005673CA /* ChartsViewController.swift in Sources */,
+				3A59487F1E290B09005673CA /* JSONFactory.swift in Sources */,
+				3A5948711E28D638005673CA /* RecordCell.swift in Sources */,
+				3A5948891E290B7B005673CA /* SubjectiveCondition.swift in Sources */,
+				3A5948831E290B50005673CA /* DiaryRecord.swift in Sources */,
+				3A59488B1E290B93005673CA /* DateUtils.swift in Sources */,
+				3A5948951E290BD2005673CA /* PopTimeViewController.swift in Sources */,
+				3A59488F1E290BAD005673CA /* PopDateViewController.swift in Sources */,
+				3A59487B1E28D837005673CA /* RecordViewController.swift in Sources */,
+				3A59487D1E28D89E005673CA /* LoginViewController.swift in Sources */,
+				3A5948851E290B5F005673CA /* WeightRecord.swift in Sources */,
+				3A5948971E290BDB005673CA /* PopTimePicker.swift in Sources */,
+				3A5948751E28D824005673CA /* InfoViewController.swift in Sources */,
+				3A5948771E28D828005673CA /* NewEntryController.swift in Sources */,
+				3A5948911E290BBB005673CA /* PopDatePicker.swift in Sources */,
+				3A4093B71E28CC7E0031754F /* AppDelegate.swift in Sources */,
+				3A5948871E290B68005673CA /* StepsRecord.swift in Sources */,
+				3A59489B1E290C24005673CA /* ReselectableSegmentedControl.swift in Sources */,
+				3A630AA41E3109C1007BEC6B /* ChartXAxisFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A4093BA1E28CC7E0031754F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A4093BB1E28CC7E0031754F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A4093BF1E28CC7E0031754F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A4093C01E28CC7E0031754F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A4093C31E28CC7E0031754F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A4093C41E28CC7E0031754F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A4093C61E28CC7E0031754F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7418967455BC9C430F9C16 /* Pods-MIMOTI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R4N8R7XAH7;
+				INFOPLIST_FILE = MIMOTI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.bfh.MIMOTI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3A4093C71E28CC7E0031754F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E357471FC08B78C7FFA91D21 /* Pods-MIMOTI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R4N8R7XAH7;
+				INFOPLIST_FILE = MIMOTI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.bfh.MIMOTI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A4093AE1E28CC7E0031754F /* Build configuration list for PBXProject "MIMOTI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4093C31E28CC7E0031754F /* Debug */,
+				3A4093C41E28CC7E0031754F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4093C51E28CC7E0031754F /* Build configuration list for PBXNativeTarget "MIMOTI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4093C61E28CC7E0031754F /* Debug */,
+				3A4093C71E28CC7E0031754F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A4093AB1E28CC7E0031754F /* Project object */;
+}
