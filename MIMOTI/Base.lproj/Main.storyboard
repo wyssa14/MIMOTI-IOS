@@ -87,9 +87,9 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkz-1V-N6i">
-                                        <rect key="frame" x="154" y="20" width="60" height="21"/>
+                                        <rect key="frame" x="154" y="20" width="158" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="9Es-fT-6GB"/>
+                                            <constraint firstAttribute="width" constant="158" id="9Es-fT-6GB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,7 +102,7 @@
                                     <constraint firstItem="fki-O5-E5L" firstAttribute="leading" secondItem="HVP-1A-AQK" secondAttribute="leading" constant="26" id="Ai3-aI-5hF"/>
                                     <constraint firstItem="dod-oa-zzr" firstAttribute="top" secondItem="PeY-oo-c1v" secondAttribute="bottom" constant="7" id="DKh-At-FMO"/>
                                     <constraint firstItem="dod-oa-zzr" firstAttribute="trailing" secondItem="YVi-DU-UvU" secondAttribute="trailing" id="IYS-WH-Cjb"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wkz-1V-N6i" secondAttribute="trailing" constant="118" id="NTu-dX-lqw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wkz-1V-N6i" secondAttribute="trailing" constant="20" id="NTu-dX-lqw"/>
                                     <constraint firstItem="a4n-SO-5vW" firstAttribute="firstBaseline" secondItem="Wkz-1V-N6i" secondAttribute="firstBaseline" id="Pma-5I-5mh"/>
                                     <constraint firstItem="PeY-oo-c1v" firstAttribute="leading" secondItem="fki-O5-E5L" secondAttribute="leading" id="Pxc-4L-P10"/>
                                     <constraint firstAttribute="bottom" secondItem="oFq-LT-1pZ" secondAttribute="bottom" constant="6" id="Qv5-BI-svg"/>
