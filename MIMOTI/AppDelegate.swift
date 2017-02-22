@@ -14,6 +14,9 @@ import Locksmith
 // Reachability object
  private var reachability:Reachability!
 
+// Get the shared UserDefaults object
+let defaults = UserDefaults.standard
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Set Server URL
-        RestManager.sharedInstance.setServerURL()
+   
+        if let specifiedMidataAddress = self.defaults.value(forKey: "MIDATAADDRESS") as! String! {
+            
+        } else {
+            
+            self.defaults.setValue("https://test.midata.coop:9000/", forKey: "MIDATAADDRESS")
+            
+        }
+
         
         
         // request permission to send local notifications

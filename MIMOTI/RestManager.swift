@@ -17,11 +17,11 @@ typealias ServiceResponse = (JSON, NSError?, Bool) -> Void
 class RestManager: NSObject {
     
     
+    // Get the shared UserDefaults object
+    let defaults = UserDefaults.standard
+    
     // static instance for external use
     static let sharedInstance = RestManager()
-    
-    // define the base URL for API calls
-    var baseURL = "https://demo.midata.coop:9000/"
     
     // define final variables for appname & appsecret
     private let appname = "MIMOTI"
@@ -40,53 +40,11 @@ class RestManager: NSObject {
     }
     
     
-    
-    // Getter function. Returns the corresponding base URL. Before Mai 1st : demo.midata.coop. After Mai 1st: ch.midata.coop
-    func setServerURL() -> Void {
-        
-    let baseCalenadar = Calendar.current
-        
-    var goLiveDateComponents = DateComponents()
-    goLiveDateComponents.year = 2016
-    goLiveDateComponents.month = 5
-    goLiveDateComponents.day = 1
-    let goLiveDate = baseCalenadar.date(from: goLiveDateComponents)!
-        
-    let today = Date()
-        
-        
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-        
-    print("Heutiges Datum: \(formatter.string(from: today))")
-    print("Go Live Datum: \(formatter.string(from: goLiveDate))")
-    
-        
-    let dayOrder = today.compare(goLiveDate)
-        
-        if dayOrder == .orderedAscending {
-            print("Today's date is before launching date")
-            baseURL = "https://test.midata.coop:9000/"
-        }
-        else if dayOrder == .orderedDescending {
-            print("Today's date is after launching date")
-            baseURL = "https://test.midata.coop:9000/"
-            
-        }
-        else if dayOrder == .orderedSame {
-            print("Today's launching date!")
-            baseURL = "https://test.midata.coop:9000/"
-        }
-        else {
-            print("Something weird happened")
-    }
-    }
-    
-    
     func authenticate(_ username : String, password : String, onCompletion: @escaping (JSON, Bool) -> Void) {
         
         // define the authentication URL
-        let authURL = baseURL + "v1/auth"
+        let authURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/auth"
+        
         
         // get record details for authentication. On completion: Send HTTP POST request with defined authparams
         JSONFactory.sharedInstance.getAuthRecord(username, password: password) { (authParams) -> Void in
@@ -107,7 +65,7 @@ class RestManager: NSObject {
         
         
         // define the absolute URL
-        let searchURL = baseURL + "v1/records/search"
+        let searchURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/search"
         
         // get record details for search. On completion: Send HTTP POST request with defined searchParams
         JSONFactory.sharedInstance.getQueryRecordWithFilter(status, filter: filter) { (searchParams) -> Void in
@@ -126,7 +84,7 @@ class RestManager: NSObject {
         
      
         // define the absolute URL
-        let searchURL = baseURL + "v1/records/search"
+        let searchURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/search"
         
         // get record details for search. On completion: Send HTTP POST request with defined searchParams
         JSONFactory.sharedInstance.getQueryRecord(status) { (searchParams) -> Void in
@@ -144,7 +102,7 @@ class RestManager: NSObject {
         
         
         // define the absolute URL
-        let searchURL = baseURL + "v1/records/search"
+        let searchURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/search"
         
         // get record details for search. On completion: Send HTTP POST request with defined searchParams
         JSONFactory.sharedInstance.getTimeStampQuery(status, timeStamp: timeStamp) { (searchParams) -> Void in
@@ -165,7 +123,7 @@ class RestManager: NSObject {
         
      
         // define the absolute URL
-        let updateURL = baseURL + "v1/records/update"
+        let updateURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/update"
         
         // get record details for creation of weightEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getWeightRecord(weightValue, dateValue: dateValue, status: status, recordID : recordID, recordVersion : recordVersion) { (weightParams) -> Void in
@@ -182,7 +140,7 @@ class RestManager: NSObject {
     func postWeight(_ weightValue : Double, dateValue : String, status : String, onCompletion: @escaping (JSON, Bool) -> Void) {
         
         // define the absolute URL
-        let createURL = baseURL + "v1/records/create"
+        let createURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/create"
         
         // get record details for creation of weightEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getWeightRecord(weightValue, dateValue: dateValue, status: status) { (weightParams) -> Void in
@@ -201,7 +159,7 @@ class RestManager: NSObject {
        
         
         // define the absolute URL
-        let updateURL = baseURL + "v1/records/update"
+        let updateURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/update"
         
         // get record details for creation of weightEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getConditionRecord(conditionValue, dateValue: dateValue, status: status, recordID : recordID, recordVersion : recordVersion) { (conditionParams) -> Void in
@@ -218,7 +176,7 @@ class RestManager: NSObject {
     func postCondition(_ conditionValue : Double, dateValue : String, status : String, onCompletion: @escaping (JSON, Bool) -> Void) {
         
         // define the absolute URL
-        let createURL = baseURL + "v1/records/create"
+        let createURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/create"
         
         // get record details for creation of conditionEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getConditionRecord(conditionValue, dateValue: dateValue, status: status) { (conditionParams) -> Void in
@@ -238,7 +196,7 @@ class RestManager: NSObject {
         
         
         // define the absolute URL
-        let updateURL = baseURL + "v1/records/update"
+        let updateURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/update"
         
         // get record details for creation of weightEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getDiaryRecord(diaryEntry, dateValue: dateValue, status: status, recordID : recordID, recordVersion : recordVersion) { (diaryParams) -> Void in
@@ -256,7 +214,7 @@ class RestManager: NSObject {
     func postDiary(_ diaryEntry : String, dateValue : String, status : String, onCompletion: @escaping (JSON, Bool) -> Void) {
         
         // define the absolute URL
-        let createURL = baseURL + "v1/records/create"
+        let createURL = (self.defaults.value(forKey: "MIDATAADDRESS") as? String)! + "v1/records/create"
         
         // get record details for creation of diaryEntry. On completion: Send HTTP Post request with defined record data
         JSONFactory.sharedInstance.getDiaryRecord(diaryEntry, dateValue: dateValue, status: status) { (diaryParams) -> Void in

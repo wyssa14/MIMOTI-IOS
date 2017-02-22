@@ -167,7 +167,7 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
             // fill local arrays
             for stepRecord in displayableStepsArray{
                 
-                stepAmount = stepRecord.stepsValue
+                stepAmount = Double(stepRecord.stepsValue)!
                     
                     datesSteps.append(self.convertFitBitDateString(stepRecord.effectiveDateTime))
                     valuesSteps.append(stepAmount)
@@ -319,7 +319,7 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
                         // create and append weight object if record type weight
                         if(subJson["data"]["code"]["coding"][0]["code"] == "activities/steps"){
                             
-                            stepsRecords.append(StepsRecord(oid: subJson["_id"].string!, version: subJson["version"].string!, effectiveDateTime: subJson["data"]["effectiveDateTime"].string!, stepsValue: subJson["data"]["valueQuantity"]["value"].double!))
+                            stepsRecords.append(StepsRecord(oid: subJson["_id"].string!, version: subJson["version"].string!, effectiveDateTime: subJson["data"]["effectiveDateTime"].string!, stepsValue: subJson["data"]["valueQuantity"]["value"].string!))
                         }
                     }
                 }

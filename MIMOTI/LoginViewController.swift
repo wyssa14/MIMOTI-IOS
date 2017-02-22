@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         
         // hide activity indicator
         loginActivity.isHidden = true
-    
+        
     }
     
     
@@ -43,10 +43,10 @@ class LoginViewController: UIViewController {
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        animateViewMoving(true, moveValue: 150)
+        animateViewMoving(true, moveValue: 50)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        animateViewMoving(false, moveValue: 150)
+        animateViewMoving(false, moveValue: 50)
     }
     
     // helper function. sliding the textfields when keyboard appears
@@ -62,11 +62,34 @@ class LoginViewController: UIViewController {
     
     
     
+    @IBAction func additionalSettingsTapped(_ sender: Any) {
+        
+            let alert = UIAlertController(title: "MIDATA Zieladresse", message: "Produktiv: https://ch.midata.coop \n Test: https://test.midata.coop", preferredStyle: .alert)
+            
+                alert.addTextField { (textField) in
+                textField.text = self.defaults.value(forKey: "MIDATAADDRESS") as? String
+            }
+        
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                self.defaults.setValue((alert?.textFields![0].text)!, forKey: "MIDATAADDRESS")
+            }))
+        
+            // 4. Present the alert.
+            self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
     // display a alert view containing a error message when the user enters wrong information
     func displayError(){
         
         // get the main thread since the background  might trigger UI updates
         DispatchQueue.main.async(execute: {
+            
+            // simulate latency
+            sleep(1)
         
             // create the alert
             let alert = UIAlertController(title: "Login fehlgeschlagen", message: "Ihr Benutzername oder Ihr Passwort ist falsch. Bitte versuchen Sie es erneut", preferredStyle: UIAlertControllerStyle.alert)
@@ -100,6 +123,10 @@ class LoginViewController: UIViewController {
         let mainViewController: UITabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         UIApplication.shared.keyWindow?.rootViewController = mainViewController
         UIApplication.shared.keyWindow?.makeKeyAndVisible()
+            
+        
+        // simulate latency
+        sleep(1)
             
         // hide activity indicator
         self.loginActivity.stopAnimating()
@@ -138,6 +165,7 @@ class LoginViewController: UIViewController {
                         // unhide activity indicator
                         self.loginActivity.isHidden = false
                         self.loginActivity.startAnimating()
+                        
                         
                     })
                     

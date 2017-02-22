@@ -16,10 +16,10 @@ class StepsRecord {
     var oid: String = ""
     var version: String = ""
     var effectiveDateTime: String = ""
-    var stepsValue: Double
+    var stepsValue: String = ""
     
     
-    init(oid: String, version: String, effectiveDateTime: String, stepsValue: Double){
+    init(oid: String, version: String, effectiveDateTime: String, stepsValue: String){
         
         
         self.oid = oid
