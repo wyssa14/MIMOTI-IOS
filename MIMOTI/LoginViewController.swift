@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func additionalSettingsTapped(_ sender: Any) {
         
-            let alert = UIAlertController(title: "MIDATA Zieladresse", message: "Produktiv: https://ch.midata.coop \n Test: https://test.midata.coop", preferredStyle: .alert)
+            let alert = UIAlertController(title: "MIDATA Zieladresse", message: "Prod: https://ch.midata.coop:9000/ \n Test: https://test.midata.coop:9000/", preferredStyle: .alert)
             
                 alert.addTextField { (textField) in
                 textField.text = self.defaults.value(forKey: "MIDATAADDRESS") as? String
