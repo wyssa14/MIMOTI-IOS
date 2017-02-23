@@ -75,6 +75,8 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
             self.weightLineChart.rightAxis.minWidth = 50
             
             
+            
+            
             self.weightLineChart.leftAxis.axisMinimum = 0
             self.weightLineChart.rightAxis.axisMinimum = 0
             
@@ -122,11 +124,6 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
             self.subjectiveConditionLineChart.leftAxis.maxWidth = 50
             self.subjectiveConditionLineChart.rightAxis.maxWidth = 50
             
-            
-            //self.subjectiveConditionLineChart.leftAxis.customAxisMax = 3.5
-            //self.subjectiveConditionLineChart.leftAxis.customAxisMin = 0.5
-            //self.subjectiveConditionLineChart.rightAxis.customAxisMin = 0.5
-            //self.subjectiveConditionLineChart.rightAxis.customAxisMax = 3.5
             
             self.subjectiveConditionLineChart.leftAxis.axisMaximum = 3.5
             self.subjectiveConditionLineChart.leftAxis.axisMinimum = 0.5
@@ -190,9 +187,6 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
                 intFormatter.numberStyle = .decimal
                 intFormatter.locale = Locale(identifier: "gsw_CH")
                 
-            // allocate total steps label with value for total steps
-                // self.totalStepsLabel.text = "\(intFormatter.string(from: NSNumber(totalStepsTaken))!))"
-                
                 self.totalStepsLabel.text = intFormatter.string(from: NSNumber(value: totalStepsTaken))! + ")"
             })
             
@@ -209,9 +203,6 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
             self.stepsLineChart.leftAxis.minWidth = 50
             self.stepsLineChart.rightAxis.minWidth = 50
             
-            
-            // self.stepsLineChart.leftAxis.customAxisMin = 0
-            // self.stepsLineChart.rightAxis.customAxisMin = 0
             
             self.stepsLineChart.leftAxis.axisMinimum = 0
             self.stepsLineChart.rightAxis.axisMinimum = 0
@@ -426,8 +417,8 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         // define chart style
         
         chart.doubleTapToZoomEnabled = false
-        chart.pinchZoomEnabled = false
-        chart.scaleXEnabled = false
+        chart.pinchZoomEnabled = true
+        chart.scaleXEnabled = true
         chart.scaleYEnabled = false
         chart.leftAxis.drawAxisLineEnabled = false
         chart.leftAxis.drawGridLinesEnabled = false
