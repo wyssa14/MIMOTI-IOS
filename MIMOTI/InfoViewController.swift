@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Locksmith
 
 class InfoViewController: UITableViewController, UITextFieldDelegate {
-    
     
     // initialize the timeDatePicker
     var timeDatePicker : PopTimePicker?
@@ -150,28 +150,50 @@ class InfoViewController: UITableViewController, UITextFieldDelegate {
     }
     
     
-    // open dial popup on user interaction
-    @IBAction func phoneButtonTapped(_ sender: AnyObject) {
-        
-        if let telephoneURL = URL(string: "telprompt://0316325406") {
-        
-            UIApplication.shared.openURL(telephoneURL)
-            
-        }
-        
-    }
-    
-    
-    // open mail client on user interaction
-    @IBAction func mailButtonTapped(_ sender: AnyObject) {
-        
-        if let mailURL = URL(string: "mailto:bauchzentrum@insel.ch"){
-            
-            UIApplication.shared.openURL(mailURL)
-        }
 
+    @IBAction func logoutTapped(_ sender: Any) {
         
-    }
+        
+        let alert = UIAlertController(title: "Logout bestätigen", message: "Möchten Sie sich wirklich ausloggen?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+           
+            do {
+                
+                try Locksmith.deleteDataForUserAccount(userAccount: "USER")
+                
+                
+                // get the main thread since the background  might trigger UI updates
+                DispatchQueue.main.async(execute: {
+                    
+                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let loginViewController: LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                    
+                    UIApplication.shared.keyWindow!.rootViewController = loginViewController
+                    
+                    UIApplication.shared.keyWindow!.window?.makeKeyAndVisible()
+                    
+                })
+                
+            } catch {
+                
+                print("Internal error while accessing Locksmith")
+                
+            }
+        }))
+
+        alert.addAction(UIAlertAction(title: "Abbrechen", style: .default, handler: {[weak alert] (_) in
+            
+            return false
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        }
     
    
      // if the user taps the UISwitch perform actions

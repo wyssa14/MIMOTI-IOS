@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
                 self.defaults.setValue((alert?.textFields![0].text)!, forKey: "MIDATAADDRESS")
             }))
         
-            // 4. Present the alert.
+            
             self.present(alert, animated: true, completion: nil)
         
     }

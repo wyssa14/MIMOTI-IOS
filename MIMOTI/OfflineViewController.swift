@@ -23,32 +23,14 @@ class OfflineViewController: UIViewController {
     }
     
     
-    
-    @IBAction func phoneButtonTapped(_ sender: AnyObject) {
-    
-        if let telephoneURL = URL(string: "telprompt://0316325406") {
-            
-            UIApplication.shared.openURL(telephoneURL)
-            
-        }
+    @IBAction func mailButtonTapped(_ sender: Any) {
         
+        if let mailURL = URL(string: "mailto:adrianroman.wyss@bfh.ch"){
+            
+        UIApplication.shared.open(mailURL)
+        
+        }
+
     }
     
-    
-    @IBAction func mailButtonTapped(_ sender: AnyObject) {
-        
-        if let mailURL = URL(string: "mailto:bauchzentrum@insel.ch"){
-            
-            UIApplication.shared.openURL(mailURL)
-        }
-        
-        
-    }
-
-    
-    
-    
-    
-    
-
 }

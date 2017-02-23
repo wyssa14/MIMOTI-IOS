@@ -341,7 +341,6 @@
                                         <state key="normal" title="Erweiterte Einstellungen"/>
                                         <connections>
                                             <action selector="additionalSettingsTapped:" destination="9gO-Ow-zBc" eventType="touchUpInside" id="irn-gV-KR2"/>
-                                            <action selector="saveButtonTapped:" destination="9gO-Ow-zBc" eventType="touchUpInside" id="Lf8-KR-3cI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -438,72 +437,46 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Sollte das Problem bestehen bleiben, melden Sie sich beim MIMOTI-Team:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wya-qI-K1q">
-                                        <rect key="frame" x="20" y="401" width="335" height="55"/>
+                                        <rect key="frame" x="20" y="401" width="335" height="52"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1o1-NN-dQn">
-                                        <rect key="frame" x="246" y="455" width="109" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactMail" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-Ab-duR">
+                                        <rect key="frame" x="136" y="479" width="22" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="109" id="WLx-fN-Kj6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="031 632 54 06"/>
-                                        <connections>
-                                            <action selector="phoneButtonTapped:" destination="x8h-2k-chK" eventType="touchUpInside" id="7aQ-5f-RVQ"/>
-                                            <action selector="phoneButtonTapped:" destination="LKS-aq-xSB" eventType="touchUpInside" id="KgZ-Cr-DBj"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactPhone" translatesAutoresizingMaskIntoConstraints="NO" id="EGm-73-LPx">
-                                        <rect key="frame" x="220" y="459" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="Xff-IG-1ld"/>
+                                            <constraint firstAttribute="height" constant="22" id="5Tb-y4-1sP"/>
+                                            <constraint firstAttribute="width" constant="22" id="diw-iv-cnq"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-vC-owl">
-                                        <rect key="frame" x="187" y="475" width="168" height="30"/>
+                                        <rect key="frame" x="166" y="475" width="189" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="168" id="2uj-HL-yQQ"/>
+                                            <constraint firstAttribute="width" constant="189" id="2uj-HL-yQQ"/>
                                         </constraints>
-                                        <state key="normal" title="bauchzentrum@insel.ch"/>
+                                        <state key="normal" title="adrianroman.wyss@bfh.ch"/>
                                         <connections>
-                                            <action selector="mailButtonTapped:" destination="x8h-2k-chK" eventType="touchUpInside" id="YK1-nL-sqm"/>
-                                            <action selector="mailButtonTapped:" destination="LKS-aq-xSB" eventType="touchUpInside" id="lK0-Xc-546"/>
+                                            <action selector="mailButtonTapped:" destination="x8h-2k-chK" eventType="touchUpInside" id="wLQ-5u-ITB"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactMail" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-Ab-duR">
-                                        <rect key="frame" x="159" y="479" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="2zh-Kl-rEG"/>
-                                            <constraint firstAttribute="height" constant="22" id="pSd-Mf-cKd"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="CbF-vC-owl" firstAttribute="leading" secondItem="oe3-Ab-duR" secondAttribute="trailing" constant="8" id="0Xg-LI-aWA"/>
                                     <constraint firstItem="Wya-qI-K1q" firstAttribute="top" secondItem="PSR-Qc-F3t" secondAttribute="bottom" constant="2" id="7zO-D1-LVy"/>
-                                    <constraint firstItem="1o1-NN-dQn" firstAttribute="trailing" secondItem="CbF-vC-owl" secondAttribute="trailing" id="90m-q7-asH"/>
-                                    <constraint firstItem="oe3-Ab-duR" firstAttribute="top" secondItem="Wya-qI-K1q" secondAttribute="bottom" constant="23" id="B7B-vu-EXX"/>
-                                    <constraint firstItem="1o1-NN-dQn" firstAttribute="leading" secondItem="EGm-73-LPx" secondAttribute="trailing" constant="4" id="BN2-ud-H5K"/>
+                                    <constraint firstItem="oe3-Ab-duR" firstAttribute="centerY" secondItem="CbF-vC-owl" secondAttribute="centerY" id="9yQ-DY-ycr"/>
                                     <constraint firstItem="PSR-Qc-F3t" firstAttribute="top" secondItem="j7g-OY-NZp" secondAttribute="bottom" constant="8" symbolic="YES" id="GZN-cx-UWh"/>
                                     <constraint firstItem="Wya-qI-K1q" firstAttribute="trailing" secondItem="PSR-Qc-F3t" secondAttribute="trailing" id="JKO-C4-nc1"/>
-                                    <constraint firstItem="1o1-NN-dQn" firstAttribute="top" secondItem="PSR-Qc-F3t" secondAttribute="bottom" constant="56" id="Tne-PI-Hak"/>
                                     <constraint firstItem="UIw-50-dyv" firstAttribute="centerX" secondItem="CBI-8X-FsE" secondAttribute="centerX" id="UvP-Os-VLV"/>
                                     <constraint firstItem="Wya-qI-K1q" firstAttribute="leading" secondItem="PSR-Qc-F3t" secondAttribute="leading" id="VXR-au-DWb"/>
-                                    <constraint firstItem="1o1-NN-dQn" firstAttribute="trailing" secondItem="Wya-qI-K1q" secondAttribute="trailing" id="aEE-Ug-bRd"/>
                                     <constraint firstItem="UIw-50-dyv" firstAttribute="top" secondItem="CBI-8X-FsE" secondAttribute="top" constant="20" id="bTj-Qe-E95"/>
                                     <constraint firstItem="PSR-Qc-F3t" firstAttribute="leading" secondItem="CBI-8X-FsE" secondAttribute="leading" constant="20" id="bzU-0l-dcq"/>
                                     <constraint firstItem="PSR-Qc-F3t" firstAttribute="centerX" secondItem="j7g-OY-NZp" secondAttribute="centerX" id="dHG-ca-epw"/>
-                                    <constraint firstItem="CbF-vC-owl" firstAttribute="leading" secondItem="oe3-Ab-duR" secondAttribute="trailing" constant="6" id="e2e-K8-Xlg"/>
                                     <constraint firstAttribute="trailing" secondItem="PSR-Qc-F3t" secondAttribute="trailing" constant="20" id="fcz-zp-PIp"/>
-                                    <constraint firstAttribute="bottom" secondItem="CbF-vC-owl" secondAttribute="bottom" constant="20" id="gKZ-10-ukf"/>
-                                    <constraint firstItem="EGm-73-LPx" firstAttribute="centerY" secondItem="1o1-NN-dQn" secondAttribute="centerY" id="hdC-Se-7CL"/>
-                                    <constraint firstAttribute="bottom" secondItem="EGm-73-LPx" secondAttribute="bottom" constant="44" id="lxC-4s-JzH"/>
-                                    <constraint firstItem="EGm-73-LPx" firstAttribute="top" secondItem="Wya-qI-K1q" secondAttribute="bottom" constant="3" id="naq-LH-T27"/>
-                                    <constraint firstItem="CbF-vC-owl" firstAttribute="top" secondItem="Wya-qI-K1q" secondAttribute="bottom" constant="19" id="nrm-iP-QiQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="CbF-vC-owl" secondAttribute="bottom" constant="119" id="gKZ-10-ukf"/>
+                                    <constraint firstItem="CbF-vC-owl" firstAttribute="top" secondItem="Wya-qI-K1q" secondAttribute="bottom" constant="22" id="nrm-iP-QiQ"/>
                                     <constraint firstItem="j7g-OY-NZp" firstAttribute="top" secondItem="UIw-50-dyv" secondAttribute="bottom" constant="18" id="pgh-co-K8H"/>
-                                    <constraint firstItem="CbF-vC-owl" firstAttribute="centerY" secondItem="oe3-Ab-duR" secondAttribute="centerY" id="uaJ-hS-7CO"/>
                                     <constraint firstItem="j7g-OY-NZp" firstAttribute="centerX" secondItem="UIw-50-dyv" secondAttribute="centerX" id="un4-Pu-Ym6"/>
+                                    <constraint firstAttribute="trailing" secondItem="CbF-vC-owl" secondAttribute="trailing" constant="20" id="w9V-Yl-5Vv"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -521,7 +494,7 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-T0-7c9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-85" y="-665"/>
+            <point key="canvasLocation" x="-85.5" y="-665.5"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="czf-gN-Kqm">
@@ -878,7 +851,7 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Kontakt" id="lun-qM-HYX">
+                            <tableViewSection headerTitle="Logout &amp; Kontakt" id="lun-qM-HYX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="27" id="zwH-8D-vrh">
                                         <rect key="frame" x="0.0" y="247" width="320" height="27"/>
@@ -886,27 +859,6 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zwH-8D-vrh" id="sKY-5h-VzK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="27"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVS-jw-nuN">
-                                                    <rect key="frame" x="200" y="0.0" width="109" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="031 632 54 06"/>
-                                                    <connections>
-                                                        <action selector="phoneButtonTapped:" destination="LKS-aq-xSB" eventType="touchUpInside" id="J4e-Wa-Wu5"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="contactPhone" translatesAutoresizingMaskIntoConstraints="NO" id="18B-kx-NPS">
-                                                    <rect key="frame" x="174" y="4" width="22" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="22" id="1PZ-cK-yqT"/>
-                                                        <constraint firstAttribute="height" constant="22" id="eDj-dg-JxG"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="HVS-jw-nuN" secondAttribute="trailing" constant="3" id="Hws-Zd-WzK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="18B-kx-NPS" secondAttribute="trailing" constant="116" id="h4S-jM-WQi"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="29" id="rXA-gm-bNw">
@@ -916,24 +868,17 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-sP-9ZG">
-                                                    <rect key="frame" x="141" y="-1" width="168" height="30"/>
-                                                    <state key="normal" title="bauchzentrum@insel.ch"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4g-YV-iyI">
+                                                    <rect key="frame" x="136" y="-1" width="48" height="30"/>
+                                                    <state key="normal" title="Logout"/>
                                                     <connections>
-                                                        <action selector="mailButtonTapped:" destination="LKS-aq-xSB" eventType="touchUpInside" id="Quz-H6-38z"/>
+                                                        <action selector="logoutTapped:" destination="LKS-aq-xSB" eventType="touchUpInside" id="8bw-Ao-bBk"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="contactMail" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-9y-h8s">
-                                                    <rect key="frame" x="113" y="3" width="22" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="22" id="i7G-gH-wt9"/>
-                                                        <constraint firstAttribute="height" constant="22" id="ic8-pH-SuJ"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="yhX-sP-9ZG" secondAttribute="trailing" constant="3" id="3Q3-9H-Ztm"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ORE-9y-h8s" secondAttribute="trailing" constant="177" id="uav-zu-Dov"/>
+                                                <constraint firstItem="Z4g-YV-iyI" firstAttribute="leading" secondItem="0S5-9p-FbM" secondAttribute="leadingMargin" constant="128" id="MFT-8c-ESX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z4g-YV-iyI" secondAttribute="trailing" constant="128" id="br5-4z-jWo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -963,7 +908,6 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFo-bf-O1s">
                                                     <rect key="frame" x="15" y="4" width="290" height="106"/>
-                                                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">Zusammenarbeit zwischen der Medizininformatik der Berner Fachhochschule, dem Bauchzentrum des Inselspitals Bern und der MIDATA.coop Genossenschaft.</string>
                                                     <color key="textColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -975,7 +919,6 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
                                                 <constraint firstAttribute="trailingMargin" secondItem="bFo-bf-O1s" secondAttribute="trailing" constant="7" id="mWE-Ed-I2G"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1027,7 +970,6 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
     <resources>
         <image name="chartsTabBar" width="15" height="15"/>
         <image name="contactMail" width="86" height="87"/>
-        <image name="contactPhone" width="90" height="91"/>
         <image name="dateNewEntry" width="86" height="92"/>
         <image name="infoReminder" width="87" height="91"/>
         <image name="infoTabBar" width="15" height="15"/>
@@ -1045,6 +987,6 @@ Sobald die Verbindung wieder verfügbar ist, werden Sie automatisch auf den Star
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eRA-jy-d9b"/>
+        <segue reference="qM2-p3-7e3"/>
     </inferredMetricsTieBreakers>
 </document>

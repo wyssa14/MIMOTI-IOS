@@ -24,9 +24,14 @@ class JSONFactory: NSObject {
         
         // cast & return value for key "authToken" in dictionary variable
 
-        if let authToken = dictionary!["authToken"]{
+        if let authToken = dictionary?["authToken"]{
         
-           
+            if authToken == nil {
+                
+                return "-1"
+                
+            }
+            
         return authToken as! String
             
         }
